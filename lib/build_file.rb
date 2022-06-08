@@ -48,9 +48,9 @@ class BuildModel
     File.open(@filename, 'a') do |f|
       f.puts "Titulo:\n#{@title}"
       f.puts "\n----------------\nDescrição comercial:\n#{@commercial_result}"
-      f.puts "\n#{@nearby_description}\n\nO #{@prop_type} possui:"
-      @residence_features.each { |feat| f.puts "  - #{feat}" }
-      f.puts "\nO condomínio conta com os seguintes recursos:"
+      f.puts "\n#{@nearby_description}\n\nO #{@prop_type} possui:" if @residence_features
+      @residence_features.each { |feat| f.puts "  - #{feat}" } if @residence_features
+      f.puts "\nO condomínio conta com os seguintes recursos:" if @condo_features
       @condo_features.each { |feat| f.puts "  - #{feat}" } if @condo_features
       f.puts "\n#{@matricula}\n\n"
     end
