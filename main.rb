@@ -16,7 +16,7 @@ type_num = gets.chomp.to_i
 type = TYPES_OF_PROPERTIES[type_num]
 
 puts "\nQual a area util (somente numeros)"
-area = gets.chomp.to_i
+area = gets.chomp
 
 puts "\nQual a localização? ex. São Paulo/SP"
 location = gets.chomp
