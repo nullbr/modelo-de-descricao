@@ -9,7 +9,7 @@ puts "Qual o número da matricula"
 matricula_num = gets.chomp
 model = BuildModel.new(matricula_num)
 
-# Criating a title
+# Creating a title
 puts 'Qual tipo de popriedade?'
 TYPES_OF_PROPERTIES.each_with_index { |type, idx| puts "#{idx}: #{type}" }
 type_num = gets.chomp.to_i
@@ -23,7 +23,7 @@ location = gets.chomp
 
 model.titulo(type, area, location)
 
-# Criating a commertial description
+# Creating a commertial description
 puts "\nQual a rua?"
 street = gets.chomp
 
@@ -92,7 +92,7 @@ puts "\nInsira as a comarca da matricula (ex. CRI da Comarca de Tremembé/SP.)"
 registration = gets.chomp
 model.matricula(registration)
 
-# Description form matricula
+# Description from matricula
 # puts "Usar temp file (1) ou inserir o nome do arquivo (2)?"
 # option = gets.chomp.to_i
 
